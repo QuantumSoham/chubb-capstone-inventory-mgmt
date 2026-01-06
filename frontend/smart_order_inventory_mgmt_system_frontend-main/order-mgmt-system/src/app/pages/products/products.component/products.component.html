@@ -1,0 +1,57 @@
+<div class="container">
+
+  <h2>Products</h2>
+
+  
+  <!-- Add Product -->
+  <div class="card">
+      <h3>Add Product</h3>
+      
+      <input [(ngModel)]="newProduct.name" placeholder="Name" />
+      <input [(ngModel)]="newProduct.category" placeholder="Category" />
+      <input [(ngModel)]="newProduct.imageUrl" placeholder="Image URL" />
+      <input type="number" [(ngModel)]="newProduct.price" placeholder="Price" />
+      <textarea [(ngModel)]="newProduct.description" placeholder="Description"></textarea>
+      
+      <button (click)="addProduct()">Add Product</button>
+    </div>
+    
+    <!-- Product List -->
+    <h3>All Products</h3>
+    <button class="refresh" (click)="loading=false">🔄 Refresh Products</button>
+
+  <div *ngIf="loading">Loading...</div>
+
+  <table *ngIf="!loading">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td>{{ p.id }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.category }}</td>
+        <td>{{ p.price }}</td>
+        <td>
+          <button class="danger" (click)="deleteProduct(p.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- Modal -->
+<div class="modal-backdrop" *ngIf="showModal">
+  <div class="modal-box" [ngClass]="modalType">
+    <p>{{ modalMessage }}</p>
+    <button (click)="closeModal()">OK</button>
+  </div>
+</div>

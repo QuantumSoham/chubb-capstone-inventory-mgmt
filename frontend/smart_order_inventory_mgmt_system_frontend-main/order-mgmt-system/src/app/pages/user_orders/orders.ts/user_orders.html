@@ -1,0 +1,94 @@
+<h2 class="page-title">📦 My Orders</h2>
+
+<button class="refresh-btn" (click)="loadOrders()">
+  🔄 Refresh Orders
+</button>
+
+<!-- <div *ngIf="loading" class=[this.loading]>
+  Fetching your orders...
+</div> -->
+
+<div *ngIf="error" class="error">
+  {{ error }}
+</div>
+
+<div *ngIf="!loading && orders.length === 0" class="empty">
+  You haven’t placed any orders yet.
+</div>
+
+<div class="orders-container">
+  <div class="order-card" *ngFor="let order of orders">
+
+    <div class="order-header">
+      <div>
+        <div class="order-id">Order #{{ order.id }}</div>
+        <div class="order-date">
+          {{ order.createdAt | date:'medium' }}
+        </div>
+      </div>
+      <div class="order-footer">
+  <div class="amount">
+    Total Amount
+    <span>₹ {{ order.totalAmount }}</span>
+  </div>
+
+  <button
+    class="cancel-btn"
+    *ngIf="canCancel(order.status)"
+    (click)="openCancelModal(order)">
+    ❌ Cancel Order
+  </button>
+</div>
+
+      <span class="status-badge" [ngClass]="getStatusClass(order.status)">
+        {{ order.status }}
+      </span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="shipping">
+      <div class="section-title">Delivering to</div>
+      <div class="shipping-name">{{ order.shippingName }}</div>
+      <div class="shipping-address">
+        {{ order.shippingAddress }},
+        {{ order.city }},
+        {{ order.state }} - {{ order.pincode }}
+      </div>
+      <div class="shipping-phone">
+        📞 {{ order.shippingPhone }}
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="order-footer">
+      <div class="amount">
+        Total Amount
+        <span>₹ {{ order.totalAmount }}</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Cancel Confirmation Modal -->
+<div class="modal-backdrop" *ngIf="showCancelModal">
+  <div class="modal">
+    <h3>Cancel Order</h3>
+    <p>
+      Are you sure you want to cancel
+      <strong>Order #{{ selectedOrder?.id }}</strong>?
+    </p>
+
+    <div class="modal-actions">
+      <button class="btn-secondary" (click)="closeCancelModal()">
+        No
+      </button>
+      <button class="btn-danger" (click)="confirmCancel()">
+        Yes, Cancel
+      </button>
+    </div>
+  </div>
+</div>

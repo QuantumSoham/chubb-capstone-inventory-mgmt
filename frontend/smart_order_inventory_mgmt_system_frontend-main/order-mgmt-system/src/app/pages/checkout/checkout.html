@@ -1,0 +1,41 @@
+<div class="checkout-page">
+
+  <h2 class="page-title">Checkout</h2>
+
+  <form #f="ngForm" (ngSubmit)="placeOrder(f)" class="checkout-card">
+
+    <h3>Delivery Address</h3>
+
+    <div class="form-grid">
+      <input name="shippingName" ngModel placeholder="Full Name" required>
+      <input name="shippingPhone" ngModel placeholder="Phone Number" required>
+
+      <textarea
+        name="shippingAddress"
+        ngModel
+        placeholder="Full Address"
+        required></textarea>
+
+      <input name="city" ngModel placeholder="City" required>
+      <input name="state" ngModel placeholder="State" required>
+      <input name="pincode" ngModel placeholder="Pincode" required>
+    </div>
+
+    <button type="submit" class="place-order-btn">
+      Place Order
+    </button>
+
+  </form>
+
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" *ngIf="orderPlaced">
+  <div class="modal">
+    <div class="success-icon">✔</div>
+    <h2>Order Placed Successfully!</h2>
+    <p>Your order has been confirmed and will be processed soon.</p>
+
+    <button (click)="closeModal()">Continue Shopping</button>
+  </div>
+</div>
