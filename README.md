@@ -12,10 +12,6 @@ This repository is a compilation of my frontend and backend repositories in one 
 ---
 
 ## Architecture & Diagrams — System Overview
-
-Below are the core architecture diagrams for the project. These are placed high in the README so visitors immediately see the system design and CI/CD topology.
-
-<!-- If you want them centered and slightly larger on GitHub, HTML works in a README -->
 <div align="left">
 
 ### System design / architecture
@@ -128,3 +124,4 @@ MIT © QuantumSoham
 
 Project lead: QuantumSoham  
 Repository: https://github.com/QuantumSoham/chubb-capstone-inventory-mgmt
+
