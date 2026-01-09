@@ -8,6 +8,7 @@ This repository is a compilation of my frontend and backend repositories in one 
 
 - Frontend: https://github.com/QuantumSoham/smart_order_inventory_mgmt_system_frontend
 - Backend: https://github.com/QuantumSoham/smart_order_inventory_mgmt_system_backend
+- Config Server: https://github.com/QuantumSoham/inventory-config-server-repo
 
 ---
 
@@ -124,4 +125,5 @@ MIT © QuantumSoham
 
 Project lead: QuantumSoham  
 Repository: https://github.com/QuantumSoham/chubb-capstone-inventory-mgmt
+
 
