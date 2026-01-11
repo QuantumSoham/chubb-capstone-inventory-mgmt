@@ -1,4 +1,4 @@
-# Chubb Capstone — Smart Order Inventory Management
+# Chubb Capstone — Smart Order Inventory Management 
 
 This repository is a compilation of my frontend and backend repositories in one place.
 
@@ -125,5 +125,6 @@ MIT © QuantumSoham
 
 Project lead: QuantumSoham  
 Repository: https://github.com/QuantumSoham/chubb-capstone-inventory-mgmt
+
 
 
