@@ -21,6 +21,18 @@ This repository is a compilation of my frontend and backend repositories in one 
 ### CI/CD & Deployment diagram
 ![CI/CD and deployment diagram](images/cicd-deployment-diagram.png)
 
+## Spring AI and Agent Server Architecture
+
+<img width="6018" height="2658" alt="image" src="https://github.com/user-attachments/assets/399af9e5-98ce-456e-9459-41c746f35569" />
+
+## ER Diagrams 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9395d50f-b452-4e94-838b-a5d7d1e3b514" />
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f2cc6b8a-09a2-4a1f-a4ea-9f9ea5f876d2" />
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/750210a2-3581-4aad-ab63-7b7d237805a4" />
+
+
 ### Sequence diagram (request flows)
 ![Sequence diagram](images/sequence-diagram.png)
 
@@ -125,6 +137,7 @@ MIT © QuantumSoham
 
 Project lead: QuantumSoham  
 Repository: https://github.com/QuantumSoham/chubb-capstone-inventory-mgmt
+
 
 
 
