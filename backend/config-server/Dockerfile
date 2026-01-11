@@ -1,9 +1,8 @@
-FROM maven:3.8.5-openjdk-17
+# Use lightweight Java runtime
+FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /config-server
 
-COPY . .
+COPY target/config-server-0.0.1-SNAPSHOT.jar app.jar
 
-RUN mvn clean install -DskipTests
-
-CMD ["mvn","spring-boot:run","-Dmaven.test.skip=true"]
+CMD ["java","-jar","app.jar"]
